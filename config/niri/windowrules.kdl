@@ -28,3 +28,20 @@ window-rule {
     match app-id="polkit-gnome-authentication-agent-1"
     open-floating true
 }
+
+// Keep Nautilus windows tiled and filling their column
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    open-floating false
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
+}
+
+// Override the default system.kdl rule that floats Nautilus file dialogs
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    match title="^(Open.*Files?|Open [Ff]older.*|Save.*Files?|Save.*As|Save|All Files|.*wants to (open|save).*|[Cc]hoose.*)"
+    open-floating false
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
+}
