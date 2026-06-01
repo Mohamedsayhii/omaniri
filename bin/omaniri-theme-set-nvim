@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# omaniri:summary=Apply current omaniri theme to Neovim
+# omaniri:hidden=true
+
+nvim_theme_file="$HOME/.config/nvim/lua/plugins/theme.lua"
+theme_neovim="$HOME/.config/omaniri/current/theme/neovim.lua"
+
+if [[ ! -f $theme_neovim ]]; then
+  exit 0
+fi
+
+mkdir -p "$(dirname "$nvim_theme_file")"
+cp "$theme_neovim" "$nvim_theme_file"
+
+for socket in /run/user/"$(id -u)"/nvim.*.0; do
+  [[ -S $socket ]] || continue
+  nvim --server "$socket" --remote-send '<Cmd>doautocmd User LazyReload<CR>' 2>/dev/null
+done
