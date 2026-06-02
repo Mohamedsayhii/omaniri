@@ -23,7 +23,7 @@ fzf_cd_widget() {
   selected=$(fd --type d --hidden --follow --exclude ".git" . "$HOME" | fzf --height=40% --layout=reverse --border)
   if [[ -n "$selected" ]]; then
     builtin cd "$selected" || return
-     printf '\e[38;2;191;191;191m'
+    printf '\e[38;2;191;191;191m'
     pwd
   fi
 }
