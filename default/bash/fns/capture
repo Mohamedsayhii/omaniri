@@ -15,8 +15,7 @@ omaniri_capture_get_rectangles() {
     (if type == "object" and has("Ok") then .Ok else . end | if type == "object" then . else .[0] end) | .workspace_id // empty
   ')
   read -r out_x out_y < <(niri msg -j focused-output 2>/dev/null | jq -r '
-    (if type == "object" and has("Ok") then .Ok else . end | if type == "object" then . else .[0] end) | .logical | [.x, .y] | @tsv
-    else "0\t0" end
+    (if type == "object" and has("Ok") then .Ok else . end | if type == "object" then . else .[0] end) | if .logical then .logical | [.x, .y] | @tsv else "0\t0" end
   ')
 
   niri msg -j focused-output 2>/dev/null | jq -r '

@@ -3,13 +3,18 @@ binds {
     Mod+Return hotkey-overlay-title="Launch Terminal" { spawn "foot"; }
     Mod+Shift+Return hotkey-overlay-title="Terminal Here" { spawn "niri-terminal-here"; }
     Mod+A hotkey-overlay-title="Alacritty Terminal" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Discord" { spawn "discord"; }
+    Mod+D hotkey-overlay-title="Vesktop" { spawn "discord"; }
     Mod+Shift+F hotkey-overlay-title="File manager" { spawn "nautilus" "--new-window"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "zen-browser"; }
     Mod+Shift+B hotkey-overlay-title="Second Browser" { spawn "helium-browser"; }
     Mod+N hotkey-overlay-title="Text Editor" {spawn "gnome-text-editor" "--new-window"; }
     Mod+Shift+T hotkey-overlay-title="Activity Monitor (floating)" { spawn "omaniri-launch-tui" "btop"; }
     Mod+M hotkey-overlay-title="IDE" { spawn "zeditor"; }
+    // Consume one window from the right to the bottom of the focused column.
+    Mod+Comma  { consume-window-into-column; }
+    // Expel the bottom window from the focused column to the right.
+    Mod+Period { expel-window-from-column; }
+
 
     // Mod+Shift+R { spawn "foot" "-e" "ssh" "your-server"; }
 }
