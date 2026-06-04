@@ -14,12 +14,12 @@
   ],
   "modules-right": [
     "group/tray-expander",
-    "custom/screenshot",
+    // "custom/screenshot",
     "bluetooth",
     "network",
-    "pulseaudio",
-    "cpu",
-    "memory",
+    // "pulseaudio",
+    // "cpu",
+    // "memory",
     "battery",
   ],
   "niri/workspaces": {
@@ -140,10 +140,10 @@
   },
 
   "bluetooth": {
-    "format": "",
-    "format-off": "󰂲",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
+    "format": " ",
+    "format-off": " 󰂲",
+    "format-disabled": " 󰂲",
+    "format-connected": " 󰂱",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omaniri-launch-bluetooth",
