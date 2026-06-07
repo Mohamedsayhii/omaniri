@@ -16,5 +16,9 @@ binds {
     Mod+Period { expel-window-from-column; }
 
 
+    XF86AudioPlay allow-when-locked=true hotkey-overlay-title="Play/Pause" { spawn "omaniri-swayosd-client" "--playerctl" "play-pause"; }
+    XF86AudioPrev allow-when-locked=true hotkey-overlay-title="Previous" { spawn "omaniri-swayosd-client" "--playerctl" "prev"; }
+    XF86AudioNext allow-when-locked=true hotkey-overlay-title="Next" { spawn "omaniri-swayosd-client" "--playerctl" "next"; }
+
     // Mod+Shift+R { spawn "foot" "-e" "ssh" "your-server"; }
 }
