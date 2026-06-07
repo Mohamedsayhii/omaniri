@@ -378,8 +378,8 @@ show_setup_power_menu() {
 }
 
 show_battery_menu() {
-  case $(menu "Charging Threshold" "󱈏  Limit Charging (80%)\n󰁹  Full Charging (100%)") in
-  *"Limit"*) asusctl battery limit 80 ;;
+  case $(menu "Charging Threshold" "󱈏  Limit Charging (85%)\n󰁹  Full Charging (100%)") in
+  *"Limit"*) asusctl battery limit 85 ;;
   *"Full"*)  asusctl battery oneshot ;;
   *) back_to show_setup_menu ;;
   esac
