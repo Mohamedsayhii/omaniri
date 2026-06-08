@@ -3,7 +3,7 @@ binds {
     Mod+Return hotkey-overlay-title="Launch Terminal" { spawn "foot"; }
     Mod+Shift+Return hotkey-overlay-title="Terminal Here" { spawn "niri-terminal-here"; }
     Mod+A hotkey-overlay-title="Alacritty Terminal" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Vesktop" { spawn "discord"; }
+    Mod+D hotkey-overlay-title="Vesktop" { spawn "vestkop"; }
     Mod+Shift+F hotkey-overlay-title="File manager" { spawn "nautilus" "--new-window"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "zen-browser"; }
     Mod+Shift+B hotkey-overlay-title="Second Browser" { spawn "helium-browser"; }

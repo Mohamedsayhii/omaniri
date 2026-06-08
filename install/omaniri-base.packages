@@ -7,7 +7,6 @@ battop-bin
 bluetui
 bolt
 brightnessctl
-discord
 docker
 discord
 docker-buildx
@@ -107,6 +106,7 @@ tzupdate
 trash-cli
 ufw-docker
 usage
+vesktop-bin
 vpl-gpu-rt
 waybar
 walker-bin
