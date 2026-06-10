@@ -1,6 +1,5 @@
 niri
 apple_cursor
-cliamp-bin
 yay
 bat
 battop-bin
@@ -8,7 +7,6 @@ bluetui
 bolt
 brightnessctl
 docker
-discord
 docker-buildx
 docker-compose
 dust
